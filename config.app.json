@@ -9,19 +9,25 @@
       "name": "Token Authentication",
       "id": "token",
       "fields": [
-          {   
-            "id":"connectionname", 
-            "title":"Name",
-            "description": "Human-readable name for this configuration",
-            "type":"text",
-            "optional":true
-          },
-          {
-            "id": "token",
-            "title": "Personal Token",
-            "description": "Readwise access token (find yours at https://readwise.io/access_token)",
-            "type": "text"
-          }
+        {   
+          "id":"connectionname", 
+          "title":"Name",
+          "description": "Human-readable name for this configuration",
+          "type":"text",
+          "optional":true
+        },
+        {
+          "id": "token",
+          "title": "Personal Token",
+          "description": "Readwise access token",
+          "type": "text"
+        },
+        {
+          "id":"token-link",
+          "type":"link",
+          "value": "https://readwise.io/access_token",
+          "name": "Click here  to get your Readwise token (need to log in)"
+        }
       ]
     }
   ],
