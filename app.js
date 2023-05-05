@@ -72,7 +72,7 @@ app.post(`/api/v1/synchronizer/data`, wrap(async (req, res) => {
             highlights = highlights.concat(body.results);
         }
         
-        let items = highlights.map((h) => ({...h, id: uuid((h.id).toString()), name: h.text.slice(0,100), text: h.text, book: uuid((h.book_id).toString()), tags: (h.tags).map((t) => t.name)}));
+        let items = highlights.map((h) => ({...h, id: uuid((h.id).toString()), name: (h.text.length > 100 ? h.text.slice(0,97) + "..." : h.text), text: h.text, book: uuid((h.book_id).toString()), tags: (h.tags).map((t) => t.name)}));
         return res.json({items});
     }
     
