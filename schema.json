@@ -8,6 +8,11 @@
             "name": "Name",
             "type": "text"
         },
+        "text": {
+            "name": "Text",
+            "type": "text",
+            "subType": "md"
+        },
         "note": {
             "name": "Note",
             "type": "text"
